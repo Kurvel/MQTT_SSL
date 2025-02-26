@@ -66,7 +66,7 @@ public class Main {
             options.setPassword(PASSWORD.toCharArray());
             options.setConnectionTimeout(CONNECT_TIMEOUT);
             options.setCleanSession(CLEAN_SESSION);
-            options.setSocketFactory(SSLUtils.getSingleSocketFactory(CA_CERT_PATH));
+            //options.setSocketFactory(SSLUtils.getSingleSocketFactory(CA_CERT_PATH));
             options.setSocketFactory(getTruststoreFactory());
             System.out.println("Connecting to broker: " + server);
             client.connect(options);
